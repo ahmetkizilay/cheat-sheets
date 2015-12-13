@@ -18,7 +18,7 @@ Copy your public key to the server to authenticate via ssh
 ssh-copy-id -i ~/.ssh/id_rsa.pub huruc@SERVER-IP
 ```
 
-Note: If you need to create a new key pair, follow the instructions [here](ubuntu_scripts.md).
+Note: If you need to create a new key pair, follow the instructions [here](linux-scripts.md#creating-ssh-key-pair).
 
 #### Disable root access
 Disable root access through ssh by updating `/etc/ssh/sshd_config`. Add the following line:
