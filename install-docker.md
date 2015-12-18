@@ -95,7 +95,6 @@ You need to check if your db is ready before running your command.
 ```
 #!/bin/bash
 
-bundle install
 while [ $(curl -s -o /dev/null -w "%{http_code}" $DB_PORT_7474_TCP_ADDR:7474) -ne 200 ]; do
     sleep 2
 done
