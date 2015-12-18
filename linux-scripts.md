@@ -7,7 +7,7 @@ chmod 700 ~/.ssh
 ssh-keygen -t rsa
 ```
 
-#### User management
+### User management
 
 List all users
 ```
