@@ -49,6 +49,7 @@ Visit [here](https://docs.docker.com/compose/install/) for more info.
 ```
 FROM node:4.2
 MAINTAINER Ahmet Kizilay <ahmet.kizilay@gmail.com>
+
 COPY package.json /src/package.json
 RUN cd /src; npm install
 

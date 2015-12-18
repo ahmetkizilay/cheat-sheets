@@ -34,3 +34,16 @@ List groups of a user
 ```
 groups <user>
 ```
+#### Server Monitoring
+Summary of disk usage
+```
+df -h --total
+```
+Summary of all processes
+```
+top
+```
+Free memory
+```
+free -m
+```
