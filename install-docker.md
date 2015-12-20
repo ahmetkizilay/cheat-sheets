@@ -110,7 +110,7 @@ docker run \
     --detach \
     --publish=7474:7474 \
     --volume=$HOME/neo4j/data:/data \
-    --ulimit=nofile=40000:40000
-    --env=NEO4J_AUTH=none
+    --ulimit=nofile=40000:40000 \
+    --env=NEO4J_AUTH=none \
     neo4j/neo4j
 ```
