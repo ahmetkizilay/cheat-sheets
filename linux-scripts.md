@@ -47,3 +47,13 @@ Free memory
 ```
 free -m
 ```
+
+#### Searching files
+Search for a string in a file
+```
+grep -e <term> <file>
+```
+Print how many times the term appears
+```
+grep -e <term> <file> --count
+```

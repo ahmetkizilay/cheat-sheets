@@ -114,3 +114,14 @@ docker run \
     --env=NEO4J_AUTH=none \
     neo4j/neo4j
 ```
+#### Remove all stopped containers
+```
+docker rm $(docker ps -aq)
+```
+#### Docker-compose CI routine
+
+```
+docker-compose run --rm web <command to run>
+docker-compose stop
+docker-compose rm -f
+```
