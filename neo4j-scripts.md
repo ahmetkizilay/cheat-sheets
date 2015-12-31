@@ -37,8 +37,9 @@ In `conf/neo4j.properties`, add
 allow_store_upgrade=true
 ```
 
-#### Increate ulimit for user
-In `/etc/security/limits.conf`, add the following for the user running neo4j
+#### Increase ulimit for user
+
+In `/etc/security/limits.conf`, add the following for the user running neo4j to fix the `WARNING: Max 1024 open files allowed, minimum of 40 000 recommended.` warning.
 ```
 <user>   soft    nofile  40000
 <user>   hard    nofile  40000
