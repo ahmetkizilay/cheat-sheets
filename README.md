@@ -6,3 +6,4 @@ A collection of handy scripts, tips etc. that I occasionally need.
 * [Linux Scripts](linux-scripts.md): Useful commands and scripts.
 * [Docker](install-docker.md): Installation and sample commands and files.
 * [Setup Gitlab Runner](gitlab-runner-setup.md): Getting started with the Gitlab Continuous Integration runner.
+* [Neo4j Scripts](neo4j-scripts.md): Useful configuration settings for Neo4j.

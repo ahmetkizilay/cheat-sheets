@@ -91,7 +91,7 @@ web:
   links:
     - db
 ```
-You need to make sure your db is up before starting your app. See [Polling DB](#Polling-DB-for-startup).
+You need to make sure your db is up before starting your app. See [Polling DB](#polling-db-for-startup).
 
 #### Remove all stopped containers
 ```
@@ -107,7 +107,7 @@ docker-compose rm -f
 ```
 
 #### Running Neo4j instance
-See [neo4j-scripts](neo4j-scripts.md#Running-with-Docker)
+See [neo4j-scripts](neo4j-scripts.md#running-with-docker)
 
 #### Polling DB for startup
 You need to check if your db is ready before running your command.
