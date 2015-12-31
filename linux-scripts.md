@@ -34,6 +34,7 @@ List groups of a user
 ```
 groups <user>
 ```
+
 #### Server Monitoring
 Summary of disk usage
 ```
@@ -56,4 +57,18 @@ grep -e <term> <file>
 Print how many times the term appears
 ```
 grep -e <term> <file> --count
+```
+
+#### Extract Tar archives
+Extract all files in archive
+```
+tar -zxvf backup.tar.gz -C /target/directory
+```
+List files in archive
+```
+tar -tvf backup.tar.gz
+```
+Print only the top level item
+```
+tar -tf backup.tar.gz | sed -e 's@/.*@@' | uniq
 ```

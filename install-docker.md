@@ -91,6 +91,24 @@ web:
   links:
     - db
 ```
+You need to make sure your db is up before starting your app. See [Polling DB](#Polling-DB-for-startup).
+
+#### Remove all stopped containers
+```
+docker rm $(docker ps -aq)
+```
+
+#### Docker-compose CI routine
+
+```
+docker-compose run --rm web <command to run>
+docker-compose stop
+docker-compose rm -f
+```
+
+#### Running Neo4j instance
+See [neo4j-scripts](neo4j-scripts.md#Running-with-Docker)
+
 #### Polling DB for startup
 You need to check if your db is ready before running your command.
 ```
@@ -102,26 +120,4 @@ done
 
 rake testing:rails["http://$DB_PORT_7474_TCP_ADDR:7474"]
 
-```
-#### Start neo4j
-With authentication disabled. Visit the [official repo](https://hub.docker.com/r/neo4j/neo4j/) for more options.
-```
-docker run \
-    --detach \
-    --publish=7474:7474 \
-    --volume=$HOME/neo4j/data:/data \
-    --ulimit=nofile=40000:40000 \
-    --env=NEO4J_AUTH=none \
-    neo4j/neo4j
-```
-#### Remove all stopped containers
-```
-docker rm $(docker ps -aq)
-```
-#### Docker-compose CI routine
-
-```
-docker-compose run --rm web <command to run>
-docker-compose stop
-docker-compose rm -f
 ```
