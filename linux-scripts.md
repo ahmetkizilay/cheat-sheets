@@ -72,3 +72,8 @@ Print only the top level item
 ```
 tar -tf backup.tar.gz | sed -e 's@/.*@@' | uniq
 ```
+
+#### Check available package version on apt
+```
+apt-cache madison <package-name>
+```
