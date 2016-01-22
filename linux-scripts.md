@@ -77,3 +77,10 @@ tar -tf backup.tar.gz | sed -e 's@/.*@@' | uniq
 ```
 apt-cache madison <package-name>
 ```
+
+#### Opening gnome-terminal
+```sh
+gnome-terminal --maximize \
+--tab --title="NEO4J" -e "/bin/bash -c 'echo \"hello\"; $SHELL'"
+```
+The `$SHELL` directive persists the terminal after the command finishes execution. 
